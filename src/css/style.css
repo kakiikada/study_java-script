@@ -5,13 +5,15 @@
     --color-accent: #ccaaee;
     --content-size: 1920px;
     --content-inner: 16px;
+    --contents-space-M: 60px;
 }
 html {
     font-size: 100%;
+    font-family: var(--font-main);
 }
 
 body {
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
     line-height: 1.7;
 }
 
@@ -20,10 +22,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index:1000;
     height: 64px;
-    line-height: 32px;
     position: fixed;
-    background-color: rgba(255,255,255,0.8);
+    line-height: 32px;
+    background-color: rgba(255,255,255,0.9);
 }
 .header_content {
     height: 100%;
@@ -35,7 +38,7 @@ header {
     display: flex;
 }
 .header_nav li {
-    width: 100px;
+    width: 120px;
     text-align: center;
     position: relative;
 
@@ -54,7 +57,6 @@ header {
     color: var(--color-accent);
     opacity: 0;
 }
-
 .header_nav a:hover .heade_nav_text {
     opacity: 0;
 }
@@ -67,12 +69,177 @@ main {
     padding-top: 80px;
     max-width: var(--content-size);
 }
-
 .footer_content {
     margin: 0 auto;
     padding: var(--content-inner);
     max-width: var(--content-size);
 }
+.icon-x, .icon-pixiv {
+    display: block;
+    width: 30px;
+    height: 30px;
+    transition: .3s;
+    border-radius: 5px;
+}
+.icon-x {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: calc(100% - 3px);
+    border: 2px solid var(--color-accent);
+    background-color: var(--color-accent);
+    background-image: url(../img/common/logo-X.svg);
+}
+.icon-x:hover {
+    background-color: var(--color-bg);
+    background-image: url(../img/common/logo-X-hover.svg);
+}
+.icon-pixiv {
+    background-size: 100%;
+    background-color: var(--color-bg);
+    background-image: url(../img/common/logo-pixiv.png);
+}
+.icon-pixiv:hover {
+    opacity: .5;
+}
+.secttionBox {
+    position: relative;
+    margin-top: 300px;
+}
+footer {
+    position: relative;
+    background-color: var(--color-accent);
+}
+.footer_content {
+    margin: 0 auto;
+    padding: var(--content-inner);
+    max-width: var(--content-size);
+}
+.footer_iconList {
+    gap: 16px;
+    display: flex;
+    justify-content: center;
+}
+.footer_pageTop {
+    top: -32px;
+    right: 16px;
+    position: absolute;
+    background-color: var(--color-accent);
+    border-radius: 12px;;
+    height: 64px;
+    width: 64px;
+}
+.footer_pageTop::after {
+    content: "";
+    top: 20px;
+    left: calc(50% - 10px);
+    display: inline-block;
+    position: absolute;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(-45deg);
+    width: 20px;
+    height: 20px;
+    transition: .3s;
+}
+
+.footer_pageTop:hover::after {
+opacity: 0.5;
+}
+
+.footer_copy {
+color: #8c4bc2;
+text-align: center;
+}
 
 
 /* style */
+/* Top-page */
+.topPage h2 {
+    font-family: "Ubuntu", sans-serif;
+    font-size: clamp(4rem, 6vw, 6rem);
+    padding-bottom: 50px;
+}
+.topPage-text + .topPage-text {
+    margin-top: 1rem;
+}
+.topPage-smallTitle {
+    font-weight: bold;
+    font-family: "Ubuntu", sans-serif;
+}
+/* top */
+.topPage_top_illust-1 {
+    width: 100%;
+    padding: 32px;
+    aspect-ratio: 1 / 0.5;
+    background-color: #ccc;
+}
+.topPage_top_title {
+    color: #fff;
+    font-size: clamp(30px, 40vw, 60px);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+.topPage_top_subTitle {
+    color: #fff;
+    line-height: 1rem;
+    font-size: clamp(10px, 20vw, 20px);
+}
+/* profile */
+.topPage_profile_linkBox {
+    margin-top: var(--contents-space-M);
+}
+
+.topPage_profile_iconText {
+    margin-top: 30px;
+}
+
+.profile_iconList {
+    gap: 16px;
+    display: flex;
+}
+.topPage_profile_illust-1,.topPage_profile_illust-2 {
+    z-index: -1;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+}
+.topPage_profile_illust-1 {
+    left: 50%;
+    top: -40px;
+    width: clamp(400px, 40vw, 800px);
+}
+.topPage_changelog {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: clamp(16px, 3vw, 32px);
+    border: 1px solid #ccc;
+}
+.topPage_changelog li{
+    gap: 32px;
+    display: flex;
+}
+
+.topPage_changelog time {
+    color: #888;
+    flex-shrink: 0;
+}
+.topPage_changelog p {
+    display: inline-block;
+}
+.topPage_gallery {
+    gap: 64px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.topPage_gallery li {
+    width: clamp(200px, 21vw, 400px);
+}
+.topPage_gallery img {
+    width: 100%;
+    object-fit cover;
+    aspect-ratio: 16 / 9;
+    background-color: #ccc;
+
+}
