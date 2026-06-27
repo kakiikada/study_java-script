@@ -18,104 +18,155 @@
 <body>
 <header>
     <div class="header_content">
-    <nav>
-    <ul class="header_nav">
-        <li><a href=""><span class="heade_nav_text">Home</span><span class="heade_nav_sText">ホーム</span></a></li>
-        <li><a href=""><span class="heade_nav_text">Profile</span><span class="heade_nav_sText">プロフィール</span></a></li>
-        <li><a href=""><span class="heade_nav_text">Log</span><span class="heade_nav_sText">学習記録</span></a></li>
-        <li><a href=""><span class="heade_nav_text">Gallery</span><span class="heade_nav_sText">作品紹介</span></a></li>
-        <!-- <li><a href=""><span class="heade_nav_text">contact</span><span class="heade_nav_sText">お問い合わせ</span></a></li> -->
-    </ul>
-    </nav>
+        <nav>
+        <ul class="header_nav">
+            <!-- <li><a href="#content-1"><span class="heade_nav_text">Home</span><span class="heade_nav_sText">ホーム</span></a></li> -->
+            <li><a href="#content-2"><span class="heade_nav_text">About</span><span class="heade_nav_sText">はじめに</span></a></li>
+            <li><a href="#content-3"><span class="heade_nav_text">Profile</span><span class="heade_nav_sText">プロフィール</span></a></li>
+            <li><a href="#content-4"><span class="heade_nav_text">Changelog</span><span class="heade_nav_sText">学習記録</span></a></li>
+            <li><a href="#content-5"><span class="heade_nav_text">Gallery</span><span class="heade_nav_sText">作品紹介</span></a></li>
+            <!-- <li><a href=""><span class="heade_nav_text">contact</span><span class="heade_nav_sText">お問い合わせ</span></a></li> -->
+        </ul>
+        </nav>
+        <div class="header_navIcon js-active">
+            <div class="header_navIcon_1"></div><div class="header_navIcon_2"></div>
+        </div>
     </div>
 </header>
-<main class="topPage">
+<main class="topPage" id="content-top">
 <div>
     <div class="topPage_top_illust-1">
-        <p class="topPage_top_subTitle">Gallery / Portfolio site</p>
-        <h1 class="topPage_top_title">牡蠣の養殖場</h1>
+        <div class="topPage_top_titleBox">
+            <p class="topPage_top_subTitle">Gallery / Portfolio site</p>
+            <h1 class="topPage_top_title">牡蠣の養殖場</h1>
+        </div>
     </div>
 </div>
-<section class="secttionBox">
-<h2>About</h2>
-<p class="topPage-text">当サイトは、エンジニア及びWebコーダーとして業務する傍らで</p>
-<ul>
-    <li>・クライアントにお見せするポートフォリオの作成</li>
-    <li>・普段の業務ではあまり携われない要素や、比較的最近普及した要素の勉強</li>
-    <li>・自身の個人活動を元に、それをよりよく見せる・要件を定義し達成する目的での表現の工夫</li>
-</ul>
-<p class="topPage-text">を目的に作成したサイトです。内容については「イラストレーターの依頼受けサイト」を目指して作成しましたが、イラストレーターとしての活動はあくまで趣味として行っているもので、お受けしている依頼も個人レベルであることをご了承ください。</p>
-<p class="topPage-text">掲載しているイラストはすべて私自身で執筆したものであり、ポートフォリオサイトのために別所で用意したものではございませんので、興味を持っていただけましたらご覧になっていただければ幸いです。</p>
-</section>
-<section class="secttionBox">
-<h2>Profile</h2>
-<p class="topPage-text"><span>name：</span>カキイカダ</p>
-<p class="topPage-text">webコーダー / プログラマー としてSESで業務しつつ、趣味でイラストを描いている者です。<br>ひっそりとですがイラスト依頼もお受けしておりますので、興味のある方は下記をご覧ください。</p>
-<div class="topPage_profile_linkBox">
-    <ul>
-        <li class="topPage-text"><p class="topPage-smallTitle">X (旧Twitter)</p>ダイレクトメールでご連絡いただけます。</li>
-        <li class="topPage-text"><p class="topPage-smallTitle">Skeb</p>イラストコミッションサービス。短文で手軽に作品を有償リクエストできるサービスです。</li>
-        <li class="topPage-text"><p class="topPage-smallTitle">Pixiv</p>pixivリクエストを開放しているほか、DMでもご連絡いただけます。<br>※返信までお時間をいただく場合がございますのでご了承ください</li>
+<section class="L-secttionBox" id="content-2">
+<h2 class="title">About</h2>
+<div class="L-contentBox">
+    <p class="topPage-text">当サイトは、エンジニア及びWebコーダーとして業務する傍らで</p>
+    <ul class="C-box-simple space-S">
+        <li>・クライアントにお見せするポートフォリオの作成</li>
+        <li>・普段の業務ではあまり携われない要素や、比較的最近普及した要素の勉強</li>
+        <li>・自身の個人活動を元に、それをよりよく見せる・要件を定義し達成する目的での表現の工夫</li>
     </ul>
-    <p class="topPage_profile_iconText">link</p>
-    <ul class="profile_iconList">
-        <li><a href="" class="icon-x"></a></li>
-        <li><a href="" class="icon-pixiv"></a></li>
+    <p class="topPage-text space-S">を目的に作成したサイトです。内容については「イラストレーターの依頼受けサイト」を目指して作成しましたが、イラストレーターとしての活動はあくまで趣味として行っているもので、お受けしている依頼も個人レベルであることをご了承ください。</p>
+    <p class="topPage-text">掲載しているイラストはすべて私自身で執筆したものであり、ポートフォリオサイトのために別所で用意したものではございませんので、興味を持っていただけましたらご覧になっていただければ幸いです。</p>
+</div>
+</section>
+<div class="toppage_profile">
+<section class="L-secttionBox" id="content-3">
+    <h2 class="title">Profile</h2>
+    <div class="toppage_profile_layout">
+        <div class="topPage_profile_layout_illustBox">
+            <div class="topPage_profile_illust"></div>
+        </div>
+        <div class="toppage_profile_layout_textBox">
+            <p class="topPage-text"><span>name：</span>カキイカダ</p>
+            <p class="topPage-text">webコーダー / プログラマー としてSESで業務しつつ、趣味でイラストを描いている者です。<br>ひっそりとですがイラスト依頼もお受けしておりますので、興味のある方は下記をご覧ください。</p>
+            <div class="topPage_profile_linkBox">
+                <ul>
+                    <li class="topPage-text"><p class="topPage-smallTitle">X (旧Twitter)</p>ダイレクトメールでご連絡いただけます。</li>
+                    <li class="topPage-text"><p class="topPage-smallTitle">Skeb</p>イラストコミッションサービス。短文で手軽に作品を有償リクエストできるサービスです。</li>
+                    <li class="topPage-text"><p class="topPage-smallTitle">Pixiv</p>pixivリクエストを開放しているほか、DMでもご連絡いただけます。<br>※返信までお時間をいただく場合がございますのでご了承ください</li>
+                </ul>
+                <p class="topPage_profile_iconText">link</p>
+                <ul class="profile_iconList">
+                    <li><a href="" class="icon-x"></a></li>
+                    <li><a href="" class="icon-pixiv"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<section class="L-secttionBox" id="content-4">
+<h2 class="title">Changelog</h2>
+<div class="L-contentBox">
+    <ul class="topPage_changelog">
+        <li class="topPage-text">
+            <time datetime="2026-06-21">2026.06.21</time><p>ポートフォリオサイト作成開始</p>
+        </li>
+        <li class="topPage-text">
+            <time datetime="2026-06-21">2026.06.21</time><p>内容サンプルテキスト内容サンプルテキスト内容サンプルテキスト内容サンプルテキスト内容サンプルテキスト</p>
+        </li>
     </ul>
 </div>
-<div class="topPage_profile_illust-1"></div>
-</section>
-<section class="secttionBox">
-<h2>Changelog</h2>
-<ul class="topPage_changelog">
-    <li class="topPage-text">
-        <time datetime="2026-06-21">2026.06.21</time><p>ポートフォリオサイト作成開始</p>
-    </li>
-    <li class="topPage-text">
-        <time datetime="2026-06-21">2026.06.21</time><p>内容サンプルテキスト内容サンプルテキスト内容サンプルテキスト内容サンプルテキスト内容サンプルテキスト</p>
-    </li>
-</ul>
 </section>
 
-<section class="secttionBox">
-<h2>Gallery</h2>
-<ul class="topPage_gallery">
-    <li>
-        <img src="" alt="">
-        <p>タイトル</p>
-    </li>
-    <li>
-        <img src="" alt="">
-        <p>タイトル</p>
-    </li>
-    <li>
-        <img src="" alt="">
-        <p>タイトル</p>
-    </li>
-    <li>
-        <img src="" alt="">
-        <p>タイトル</p>
-    </li>
-    <li>
-        <img src="" alt="">
-        <p>タイトル</p>
-    </li>
-    <li>
-        <img src="" alt="">
-        <p>タイトル</p>
-    </li>
-    <li>
-        <img src="" alt="">
-        <p>タイトル</p>
-    </li>
-</ul>
-<p>当サイトにはオリジナルイラストのみ掲載しておりますが、普段は二次創作をメインに活動しています。</p>
-<p><a href="">総合Gallery：Pixiv</a></p>
+<section class="L-secttionBox" id="content-5">
+<h2 class="title">Gallery</h2>
+<div class="topPage_gallery">
+    <ul class="topPage_gallery_content">
+        <li>
+            <a href="">
+                <div class="topPage_gallery_img">
+                    <img src=" ../src/img/illust_01.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="topPage_gallery_img">
+                    <img src=" ../src/img/illust_02.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="topPage_gallery_img">
+                    <img src=" ../src/img/illust_03.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="topPage_gallery_img">
+                    <img src=" ../src/img/illust_13.jpg" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="topPage_gallery_img">
+                    <img src=" ../src/img/illust_12.jpg" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="topPage_gallery_img">
+                    <img src=" ../src/img/illust_06.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="topPage_gallery_img">
+                    <img src=" ../src/img/illust_07.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="topPage_gallery_img">
+                    <img src=" ../src/img/illust_08.png" alt="">
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="topPage_gallery_img">
+                    <img src=" ../src/img/illust_11.png" alt="">
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
 </section>
-
-<section class="secttionBox"></section>
-
-<section class="secttionBox"></section>
+<!-- <section class="L-secttionBox"></section>
+<section class="L-secttionBox"></section> -->
 </main>
 <footer>
 <div class="footer_content">
@@ -123,7 +174,8 @@
         <li><a href="" class="icon-x"></a></li>
         <li><a href="" class="icon-pixiv"></a></li>
     </ul>
-    <div class="footer_pageTop"></div>
+    <p class="footer_text">当サイトにはオリジナルイラストのみ掲載しておりますが、普段は二次創作をメインに活動しています。</p>
+    <a href="#content-top" class="footer_pageTop"></a>
     <p class="footer_copy">© 2026 kakiikada. All rights reserved.</p>
 </div>
 </footer>
@@ -171,6 +223,6 @@ gap: 45px 5%;　flexとかglidの隙間指定
 object-fit
 color-mix()
 
-
+FLOCSS
 
 -->
