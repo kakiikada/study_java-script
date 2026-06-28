@@ -18,27 +18,34 @@
 <body>
 <header>
     <div class="header_content">
-        <nav>
-        <ul class="header_nav">
-            <!-- <li><a href="#content-1"><span class="heade_nav_text">Home</span><span class="heade_nav_sText">ホーム</span></a></li> -->
-            <li><a href="#content-2"><span class="heade_nav_text">About</span><span class="heade_nav_sText">はじめに</span></a></li>
-            <li><a href="#content-3"><span class="heade_nav_text">Profile</span><span class="heade_nav_sText">プロフィール</span></a></li>
-            <li><a href="#content-4"><span class="heade_nav_text">Changelog</span><span class="heade_nav_sText">学習記録</span></a></li>
-            <li><a href="#content-5"><span class="heade_nav_text">Gallery</span><span class="heade_nav_sText">作品紹介</span></a></li>
-            <!-- <li><a href=""><span class="heade_nav_text">contact</span><span class="heade_nav_sText">お問い合わせ</span></a></li> -->
-        </ul>
-        </nav>
-        <div class="header_navIcon js-active">
+        <div class="header_navIcon" id="js-header_navIcon">
             <div class="header_navIcon_1"></div><div class="header_navIcon_2"></div>
         </div>
+        <div class="header_logo">
+            <p>Gallery＆portfolio site</p>
+            <h1 class="header_logo_title">牡蠣の養殖場</h1>
+        </div>
+        <nav>
+        <ul class="header_nav" id="js-header_navLink">
+            <!-- <li><a  class="js-header-navLink" href="#content-1"><span class="heade_nav_text">Home</span><span class="heade_nav_sText">ホーム</span></a></li> -->
+            <li><a  class="js-header-navLink" href="#content-2"><span class="heade_nav_text">About</span><span class="heade_nav_sText">はじめに</span></a></li>
+            <li><a  class="js-header-navLink" href="#content-3"><span class="heade_nav_text">Profile</span><span class="heade_nav_sText">プロフィール</span></a></li>
+            <li><a  class="js-header-navLink" href="#content-4"><span class="heade_nav_text">Changelog</span><span class="heade_nav_sText">学習記録</span></a></li>
+            <li><a  class="js-header-navLink" href="#content-5"><span class="heade_nav_text">Gallery</span><span class="heade_nav_sText">作品紹介</span></a></li>
+            <!-- <li><a  class="js-header-navLink" href=""><span class="heade_nav_text">contact</span><span class="heade_nav_sText">お問い合わせ</span></a></li> -->
+        </ul>
+        </nav>
     </div>
 </header>
+<div class="modalFlame" id="js-modalFlame">
+    <div class="modalFlame_close" id="js-modalFlame_close"></div>
+</div>
 <main class="topPage" id="content-top">
 <div>
     <div class="topPage_top_illust-1">
         <div class="topPage_top_titleBox">
-            <p class="topPage_top_subTitle">Gallery / Portfolio site</p>
-            <h1 class="topPage_top_title">牡蠣の養殖場</h1>
+            <p class="topPage_top_subTitle">Gallery＆portfolio site</p>
+            <p class="topPage_top_title">牡蠣の養殖場</p>
         </div>
     </div>
 </div>
@@ -73,8 +80,8 @@
                 </ul>
                 <p class="topPage_profile_iconText">link</p>
                 <ul class="profile_iconList">
-                    <li><a href="" class="icon-x"></a></li>
-                    <li><a href="" class="icon-pixiv"></a></li>
+                    <li><a target="_blank" href="https://x.com/kakiikada2" class="icon-x"></a></li>
+                    <li><a target="_blank" href="https://www.pixiv.net/users/2176882" class="icon-pixiv"></a></li>
                 </ul>
             </div>
         </div>
@@ -89,7 +96,7 @@
             <time datetime="2026-06-21">2026.06.21</time><p>ポートフォリオサイト作成開始</p>
         </li>
         <li class="topPage-text">
-            <time datetime="2026-06-21">2026.06.21</time><p>内容サンプルテキスト内容サンプルテキスト内容サンプルテキスト内容サンプルテキスト内容サンプルテキスト</p>
+            <time datetime="2026-06-28">2026.06.28</time><p>TOPページのHTML/CSS作成。SPメニューなど一部js追加</p>
         </li>
     </ul>
 </div>
@@ -98,69 +105,69 @@
 <section class="L-secttionBox" id="content-5">
 <h2 class="title">Gallery</h2>
 <div class="topPage_gallery">
-    <ul class="topPage_gallery_content">
-        <li>
-            <a href="">
+    <ul class="topPage_gallery_content" id="js-modal">
+        <li class="js-modalItem">
+            <!-- <a href=""> -->
                 <div class="topPage_gallery_img">
                     <img src=" ../src/img/illust_01.png" alt="">
                 </div>
-            </a>
+            <!-- </a> -->
         </li>
-        <li>
-            <a href="">
+        <li class="js-modalItem">
+            <!-- <a href=""> -->
                 <div class="topPage_gallery_img">
                     <img src=" ../src/img/illust_02.png" alt="">
                 </div>
-            </a>
+            <!-- </a> -->
         </li>
-        <li>
-            <a href="">
+        <li class="js-modalItem">
+            <!-- <a href=""> -->
                 <div class="topPage_gallery_img">
                     <img src=" ../src/img/illust_03.png" alt="">
                 </div>
-            </a>
+            <!-- </a> -->
         </li>
-        <li>
-            <a href="">
+        <li class="js-modalItem">
+            <!-- <a href=""> -->
                 <div class="topPage_gallery_img">
                     <img src=" ../src/img/illust_13.jpg" alt="">
                 </div>
-            </a>
+            <!-- </a> -->
         </li>
-        <li>
-            <a href="">
+        <li class="js-modalItem">
+            <!-- <a href=""> -->
                 <div class="topPage_gallery_img">
                     <img src=" ../src/img/illust_12.jpg" alt="">
                 </div>
-            </a>
+            <!-- </a> -->
         </li>
-        <li>
-            <a href="">
+        <li class="js-modalItem">
+            <!-- <a href=""> -->
                 <div class="topPage_gallery_img">
                     <img src=" ../src/img/illust_06.png" alt="">
                 </div>
-            </a>
+            <!-- </a> -->
         </li>
-        <li>
-            <a href="">
+        <li class="js-modalItem">
+            <!-- <a href=""> -->
                 <div class="topPage_gallery_img">
                     <img src=" ../src/img/illust_07.png" alt="">
                 </div>
-            </a>
+            <!-- </a> -->
         </li>
-        <li>
-            <a href="">
+        <li class="js-modalItem">
+            <!-- <a href=""> -->
                 <div class="topPage_gallery_img">
                     <img src=" ../src/img/illust_08.png" alt="">
                 </div>
-            </a>
+            <!-- </a> -->
         </li>
-        <li>
-            <a href="">
+        <li class="js-modalItem">
+            <!-- <a href=""> -->
                 <div class="topPage_gallery_img">
                     <img src=" ../src/img/illust_11.png" alt="">
                 </div>
-            </a>
+            <!-- </a> -->
         </li>
     </ul>
 </div>
@@ -171,8 +178,8 @@
 <footer>
 <div class="footer_content">
     <ul class="footer_iconList">
-        <li><a href="" class="icon-x"></a></li>
-        <li><a href="" class="icon-pixiv"></a></li>
+        <li><a target="_blank" href="https://x.com/kakiikada2" class="icon-x"></a></li>
+        <li><a target="_blank" href="https://www.pixiv.net/users/2176882" class="icon-pixiv"></a></li>
     </ul>
     <p class="footer_text">当サイトにはオリジナルイラストのみ掲載しておりますが、普段は二次創作をメインに活動しています。</p>
     <a href="#content-top" class="footer_pageTop"></a>
@@ -181,7 +188,7 @@
 </footer>
 </body>
 <!-- js -->
-<script src="../src/ts/index.js"></script>
+<script type="module" src="../src/ts/index.js"></script>
 </html>
 
 
@@ -224,5 +231,7 @@ object-fit
 color-mix()
 
 FLOCSS
+
+TSのコンパイルコード：npx tsc
 
 -->
