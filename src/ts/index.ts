@@ -29,6 +29,15 @@ for (const modalItem  of modalBtn ) {
         if(modalFlame && modalFlame.classList.contains('js-active')){
             // modalFlame.classList.remove("js-active");
         } else{
+            const modalImgSrc = modalItem.querySelector<HTMLImageElement>('img');
+            if (modalImgSrc) {
+                // 画像要素の取得
+                const modalFlameImg = document.getElementById('js-modalFlameImg') as HTMLImageElement;
+                // srcを新しいURLやパスに置き換える
+                if (modalFlameImg) {
+                modalFlameImg.src = modalImgSrc.src;
+                }
+            }
             modalFlame.classList.add("js-active");
         }
     });   
