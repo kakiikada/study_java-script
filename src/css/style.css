@@ -5,8 +5,8 @@
     --color-main: #d3c7e2;
     --color-accent: #9c7dbc;
     --content-size: 1920px;
-    --contents-space-S: 30px;
-    --contents-space-M: 60px;
+    --contents-space-S: clamp(16px, 4vw, 48px);
+    --contents-space-M: clamp(16px, 3vw, 60px);
     --content-inner-W: clamp(16px, 6vw, 120px);
     --content-inner-H: clamp(16px, 3vw, 60px);
     --box-inner: clamp(16px, 1.5vw, 32px);
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    font-size: clamp(0.8rem, 1vw, 1.2rem);
+    font-size: clamp(0.8rem, 1.6vw, 1.2rem);
     line-height: 1.7;
 }
 .space-S {
@@ -277,12 +277,16 @@ footer {
     color: var(--color-accent);
     text-align: center;
 }
-.icon-x, .icon-pixiv {
+.icon-x, .icon-pixiv, .icon-skeb {
     display: block;
     width: 30px;
     height: 30px;
     transition: .3s;
     border-radius: 5px;
+}
+.icon-x:hover, .icon-pixiv:hover , .icon-skeb:hover {
+    animation-duration: .8s;
+    animation-name: rotate;
 }
 .icon-x {
     background-position: center;
@@ -292,18 +296,17 @@ footer {
     background-color: #333;
     background-image: url(../img/common/logo-X.svg);
 }
-.icon-x:hover {
-    animation-duration: .8s;
-    animation-name: rotate;
-}
 .icon-pixiv {
     background-size: 100%;
     background-color: var(--color-bg);
     background-image: url(../img/common/logo-pixiv.png);
 }
-.icon-pixiv:hover {
-    animation-duration: .8s;
-    animation-name: rotate;
+.icon-skeb {
+    width: 50px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    background-color: #2ead91;
 }
 .L-secttionBox {
     position: relative;
@@ -330,12 +333,18 @@ footer {
     pointer-events: all;
 }
 .modalFlame img {
-position: fixed;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: calc(100vw - 150px);
     max-height: calc(100vh - 40px);
+}
+@media screen and (max-width:428px) {
+    .modalFlame img {
+        max-width: calc(100vw - 20px);
+        max-height: calc(100vh - 150px);   
+    }
 }
 .modalFlame_close {
     top: 16px;
@@ -396,11 +405,23 @@ position: fixed;
 }
 
 .topPage-text + .topPage-text {
-    margin-top: 1rem;
+    margin-top: 16px;
 }
 .topPage-smallTitle {
     font-weight: bold;
+    vertical-align: middle;
     font-family: "Ubuntu", sans-serif;
+}
+.topPage-smallTitle::before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    margin-top: -3px;
+    margin-right: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: var(--color-accent);
 }
 /* top */
 .topPage_top_illust-1 {
@@ -434,7 +455,7 @@ position: fixed;
 }
 .topPage_top_subTitle {
     color: #fff;
-    line-height: 1rem;
+    line-height: 16px;
     font-size: clamp(10px, 3vw, 20px);
 }
 /* profile */
@@ -462,12 +483,12 @@ position: fixed;
 }
 
 .topPage_profile_iconText {
-    margin-top: 30px;
 }
 
 .profile_iconList {
     gap: 16px;
     display: flex;
+    margin-top: 8px;
     flex-wrap: nowrap;
 }
 .topPage_profile_layout_illustBox {
