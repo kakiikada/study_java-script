@@ -7,9 +7,9 @@
     --content-size: 1920px;
     --contents-space-S: clamp(16px, 4vw, 48px);
     --contents-space-M: clamp(16px, 3vw, 60px);
-    --content-inner-W: clamp(16px, 6vw, 120px);
-    --content-inner-H: clamp(16px, 3vw, 60px);
-    --box-inner: clamp(16px, 1.5vw, 32px);
+    --content-inner-W: clamp(8px, 3vw, 120px);
+    --content-inner-H: clamp(8px, 4vw, 60px);
+    --box-inner: clamp(8px, 1.5vw, 32px);
 }
 html {
     font-size: 100%;
@@ -405,7 +405,7 @@ footer {
 }
 
 .topPage-text + .topPage-text {
-    margin-top: 16px;
+margin-top: 16px;
 }
 .topPage-smallTitle {
     font-weight: bold;
@@ -517,20 +517,32 @@ footer {
     }
 }
 .topPage_changelog {
-    padding: clamp(16px, 3vw, 32px);
+    padding: clamp(8px, 1.8vw, 32px);
     border: 1px solid #ccc;
 }
 .topPage_changelog li{
     gap: 32px;
     display: flex;
 }
-
+.topPage_changelog li + li{
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dotted #ccc;
+}
 .topPage_changelog time {
     color: #888;
     flex-shrink: 0;
 }
 .topPage_changelog p {
     display: inline-block;
+}
+@media screen and (max-width:428px) {
+    .topPage_changelog li{
+        display: block;
+    }
+    .topPage_changelog p {
+        display: block;
+    }
 }
 .topPage_gallery {
 }
