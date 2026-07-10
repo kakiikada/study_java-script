@@ -34,6 +34,27 @@ body {
     padding: var(--box-inner);
     background-color: #ebe4f4;
 }
+/* js */
+/* 文字IN */
+.js-fadeIn {
+    opacity: 0;
+    /* transition: .8s; */
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.js-fadeInOpen {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+.js-fadeIn.js-active,
+.js-fadeInOpen.js-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
 @keyframes rotate {
     from {
         transform: rotate(0);
@@ -67,6 +88,7 @@ header {
     padding: 16px;
 }
 .header_logo {
+    font-size: 0.8rem;
     padding: 9px;
     line-height: 1.2;
     color: var(--color-accent);

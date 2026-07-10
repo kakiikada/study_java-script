@@ -1,23 +1,51 @@
 // headerアイコン取得
 const openMenu = document.getElementById("js-header_navIcon"); 
-openMenu.addEventListener('click', (event: MouseEvent) => {
-    if(openMenu && openMenu.classList.contains('js-active')){
-        openMenu.classList.remove("js-active");
-    }else{
-        openMenu.classList.add("js-active");
-    }
-});
-
-const menuLink = document.getElementById("js-header_navLink"); 
-// 子要素を取得
-const menuLinkBtn = menuLink.querySelectorAll<HTMLElement>('.js-header-navLink');
-for (const menuLinkBtnitem of menuLinkBtn) {
-    menuLinkBtnitem.addEventListener('click', (event: MouseEvent) => {
+if(openMenu){
+    openMenu.addEventListener('click', (event: MouseEvent) => {
         if(openMenu && openMenu.classList.contains('js-active')){
             openMenu.classList.remove("js-active");
+        }else{
+            openMenu.classList.add("js-active");
         }
     });
 }
+
+const menuLink = document.getElementById("js-header_navLink"); 
+// 子要素を取得
+if(menuLink){
+    const menuLinkBtn = menuLink.querySelectorAll<HTMLElement>('.js-header-navLink');
+    for (const menuLinkBtnitem of menuLinkBtn) {
+        menuLinkBtnitem.addEventListener('click', (event: MouseEvent) => {
+            if(openMenu && openMenu.classList.contains('js-active')){
+                openMenu.classList.remove("js-active");
+            }
+        });
+    }
+}
+
+// スクロールでクラスを追加
+const fadeInTextTarget = document.querySelectorAll<HTMLElement>(".js-fadeIn");
+window.addEventListener("scroll", () => {
+    fadeInTextTarget.forEach((item) => {
+        const textPosition =  item.getBoundingClientRect();
+        if (textPosition.top < window.innerHeight * 0.8) {
+        item.classList.add("js-active");
+      }
+    })
+});
+// ページ読み込みでクラスを追加
+
+const fadeInTextTargetOpen = document.querySelectorAll<HTMLElement>(".js-fadeInOpen");
+window.addEventListener("DOMContentLoaded", () => {
+    fadeInTextTargetOpen.forEach((item) => {
+        if (item) {
+            item.classList.add("js-active");
+        }
+    })
+});
+
+
+// illustrationgallery
 
 // Top 変更履歴
 type Changelog = {
@@ -45,6 +73,12 @@ const changelogData: Changelog[] = [
         time2: "06",
         time3: "30",
         text: "GitHub Pagesでサイト公開"
+    },
+    {
+        time1: "2026",
+        time2: "07",
+        time3: "10",
+        text: "スクロールアニメーション追加"
     }
 ];
 
@@ -104,33 +138,39 @@ if(GalleryList) {
 // モーダルを開く
 const modal = document.getElementById("js-modal"); 
 // // 子要素を取得
-const modalBtn = modal.querySelectorAll<HTMLElement>('.js-modalItem');
-const modalFlame = document.getElementById("js-modalFlame"); 
-for (const modalItem  of modalBtn ) {
-     modalItem.addEventListener('click', (event: MouseEvent) => {
-        if(modalFlame && modalFlame.classList.contains('js-active')){
-            // modalFlame.classList.remove("js-active");
-        } else{
-            const modalImgSrc = modalItem.querySelector<HTMLImageElement>('img');
-            if (modalImgSrc) {
-                // 画像要素の取得
-                const modalFlameImg = document.getElementById('js-modalFlameImg') as HTMLImageElement;
-                // srcを新しいURLやパスに置き換える
-                if (modalFlameImg) {
-                modalFlameImg.src = modalImgSrc.src;
+if(modal){
+    const modalBtn = modal.querySelectorAll<HTMLElement>('.js-modalItem');
+    const modalFlame = document.getElementById("js-modalFlame"); 
+    for (const modalItem  of modalBtn ) {
+         modalItem.addEventListener('click', (event: MouseEvent) => {
+            if(modalFlame && modalFlame.classList.contains('js-active')){
+                // modalFlame.classList.remove("js-active");
+            } else{
+                const modalImgSrc = modalItem.querySelector<HTMLImageElement>('img');
+                if (modalImgSrc) {
+                    // 画像要素の取得
+                    const modalFlameImg = document.getElementById('js-modalFlameImg') as HTMLImageElement;
+                    // srcを新しいURLやパスに置き換える
+                    if (modalFlameImg) {
+                    modalFlameImg.src = modalImgSrc.src;
+                    }
+                }
+                if(modalFlame){
+                    modalFlame.classList.add("js-active");
                 }
             }
-            modalFlame.classList.add("js-active");
-        }
-    });   
-}
-// // モーダルを閉じる
-    modalFlame.addEventListener('click', (event: MouseEvent) => {
-    if(modalFlame && modalFlame.classList.contains('js-active')){
-        modalFlame.classList.remove("js-active");
-    } else{
-        // modalFlame.classList.add("js-active");
+        });   
     }
-});
+    // // モーダルを閉じる
+    if(modalFlame){
+        modalFlame.addEventListener('click', (event: MouseEvent) => {
+            if(modalFlame && modalFlame.classList.contains('js-active')){
+                modalFlame.classList.remove("js-active");
+            } else{
+                // modalFlame.classList.add("js-active");
+            }
+        });
+    }
+}
 
 
