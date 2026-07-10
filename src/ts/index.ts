@@ -44,8 +44,46 @@ window.addEventListener("DOMContentLoaded", () => {
     })
 });
 
-
 // illustrationgallery
+// Topのスライダー
+const topSlider = document.querySelector<HTMLElement>(".js-topSlider");
+if (topSlider){
+    let current = 0;
+    const updateSlider = () => {
+      topSlider.style.transform = `translateX(-${current * 100}%)`;
+
+      topSliderBtn.forEach((btn) => {
+          btn.classList.remove("js-active");
+      });
+      topSliderBtn[current]?.classList.add("js-active");
+
+    };
+    const topSliderBtn = document.querySelectorAll<HTMLElement>(".topSliderBtn li");
+    // ボタンクリック
+    topSliderBtn.forEach((button, index) =>{
+        button.addEventListener("click", () =>{
+            current = index;
+            updateSlider();
+            clearInterval(topSliderTimer);   // 今のタイマーを止める
+            topSliderAuto();       // 新しく3秒カウント開始
+        })
+    })
+    // 自動再生動再生
+    const slideNum = topSliderBtn.length; // ボタンの個数
+    let topSliderTimer: number;
+    // 自動再生の関数
+    const topSliderAuto = () => {
+        topSliderTimer = window.setInterval(() => {
+            current++;
+            if (current >= slideNum) {
+                current = 0;
+            }
+            updateSlider();
+        }, 10000); 
+    }
+
+    topSliderAuto();
+}
 
 // Top 変更履歴
 type Changelog = {
@@ -78,7 +116,7 @@ const changelogData: Changelog[] = [
         time1: "2026",
         time2: "07",
         time3: "10",
-        text: "スクロールアニメーション追加"
+        text: "スクロールアニメーション追加<br>スライダー追加"
     }
 ];
 
@@ -101,25 +139,25 @@ type Gallery = {
 
 const GalleryData: Gallery[] = [
     {
-        src: "src/img/illust_01.png"
+        src: "../src/img/illust_01.png"
     },
     {
-        src: "src/img/illust_02.png"
+        src: "../src/img/illust_02.png"
     },
     {
-        src: "src/img/illust_03.png"
+        src: "../src/img/illust_03.png"
     },
     {
-        src: "src/img/illust_13.jpg"
+        src: "../src/img/illust_13.jpg"
     },
     {
-        src: "src/img/illust_12.jpg"
+        src: "../src/img/illust_12.jpg"
     },
     {
-        src: "src/img/illust_06.png"
+        src: "../src/img/illust_06.png"
     },
     {
-        src: "src/img/illust_07.png"
+        src: "../src/img/illust_07.png"
     }
 ];
 
