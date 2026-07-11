@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>牡蠣の養殖場</title>
+    <title>Kakiikadaのポートフォリオサイト</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="src/css/destyle.css">
@@ -11,116 +11,174 @@
     <!-- other -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+          
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     
 </head>
 <body>
-<header>
-    <div class="header_content">
-
+<header class="l-header">
+    <div class="l-header_content">
+        <div class="l-header_navIcon" id="js-header_navIcon">
+            <div class="l-header_navIcon_1"></div><div class="l-header_navIcon_2"></div>
+        </div>
+        <h1 class="l-header_logo"><a href="#content-top"><span>K</span>akiikada's <span>P</span>ortfolio</a></h1>
+        <nav>
+            <ul class="l-header_nav" id="js-header_navLink">
+                <li><a class="js-header-navLink" href="#content-2">Works<span class="l-header_nav_slash"> / </span><span class="l-header_nav_subText">実績</span></a></li>
+                <li><a class="js-header-navLink" href="#content-3">Skills<span class="l-header_nav_slash"> / </span><span class="l-header_nav_subText">技術</span></a></li>
+                <li><a class="js-header-navLink" href="#content-4">About<span class="l-header_nav_slash"> / </span><span class="l-header_nav_subText">私について</span></a></li>
+                <li><a class="js-header-navLink" href="#content-5">Infomation<span class="l-header_nav_slash"> / </span><span class="l-header_nav_subText">ご案内</span></a></li>
+            </ul>
+        </nav>
     </div>
 </header>
-<div class="modalFlame" id="js-modalFlame">
-    <div class="modalFlame_close" id="js-modalFlame_close"></div>
-     <img src="" alt="" id="js-modalFlameImg">
-</div>
-
 <main class="topPage" id="content-top">
+<main>
+<!-- fast view -->
+<div class="l-section index-catch">
+    <div class="l-section_inner">
+        <div>
+            <p class="index-catch_title">Web Corder &</p>
+            <p class="index-catch_title">Motion Developer</p>
+            <p class="index-catch_text">デザインの正確な再現、JS/TSによる動的実装、画像編集まで行えるWebコーダー<br>PCとSPのデザインの間を滑らかに繋ぎ、少し複雑なアニメーションも対応可能です</p>
+        </div>
+        <div class="index-catch_scroll"><span>SCROLL</span></div>
+    </div>
+</div>
+<section class="l-section" id="content-2">
+    <div class="l-section_inner">
+        <h2 class="index-title">Works<small>実績</small></h2>
+        <h3 class="index-worksTitle"><span>Demo Sample 自主制作</span></h3>
+        <div class="index-works">
+            <ul class="index-works_list">
+                <li class="index-works_card">
+                    <a href="dist/demo-1.html">
+                        <img src="src/img/index_demoCapture-1.png" alt="イラストレーター向けポートフォリオサイト">
+                        <div class="index-works_card_textBox">
+                            <p>イラストレーター向けポートフォリオサイト</p>
+                            <ul class="index-works_card_skillIcon1">
+                                <li>自主制作</li>
+                                <li>LP</li>
+                            </ul>
+                            <ul class="index-works_card_skillIcon2">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Type Script</li>
+                            </ul>
+                            <ul class="index-works_card_skillIcon3">
+                                <li>Git Hub</li>
+                                <li>デザイン</li>
+                                <li>イラスト執筆</li>
+                            </ul>
+                            <p class="index-works_card_text">自身の作品を使用し、シンプルに紹介するサイトとして作成。</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="index-works_card">
+                    <a href="#" style="pointer-events: none">
+                        <img src="src/img/common/site-noImage.png" alt="コーディングサンプルサイト-1">
+                        <div class="index-works_card_textBox">
+                            <p>作成中 - コーディングサンプル</p>
+                            <ul class="index-works_card_skillIcon1">
+                                <li>自主制作</li>
+                            </ul>
+                            <ul class="index-works_card_skillIcon2">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Type Script</li>
+                            </ul>
+                            <ul class="index-works_card_skillIcon3">
+                                <li>Git Hub</li>
+                            </ul>
+                            <p class="index-works_card_text">AIが生成したビジュアルを、破綻のない可変設計や画像変更等を行い、実案件で使えるクオリティまで上げる事が可能かの実装デモ</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-
-
-
-Kakiikada's Portfolio
-
-headerナビゲーション
-
-
-Web Coder & Motion Developer
-デザインの正確な再現、JS/TSによる動的実装、画像編集まで行えるWebコーダー
-PCとSPのデザインの間を滑らかに繋ぎ、少し複雑なアニメーションも対応可能です。
-
-
-scroll
-↓
-
-
-Works / 実績
-自主制作 / Demo smallTitle
-
-イラストレーター向けポートフォリオサイト
-LPサイト / 自主制作
-HTML / CSS / type script /
-Git Hub / デザイン / イラスト執筆
-
-自身の趣味を使用し、作品をシンプルに紹介するサイトとして作成。
-
-Experiment（カード）
-AIが生成したビジュアルを、破綻のない可変設計や画像変更等を行い、実案件で使えるクオリティまで上げる実装デモ
-
-＞＞
-
-
-技術 / skills
-
-HTML / CSS / java script / jQuery / Type Script / WordPress
-Git Hub / Photoshop /figma
-
-
-HTML / CSS
-Figmaなどのデザインを忠実に再現し、画面幅にお応じて滑らかに伸縮するリキッドデザイン・レスポンシブ化を構築できます。
-また、CSSにjava Scriptを組み合わせたアニメーションを実装できます。
-
-java script / jQuery / Type Script
-実務で求められる主要なUI（ハンバーガーメニュー、スライダー、モーダル、スクロールアニメーション等）の実装とカスタマイズが可能です。
-
-Photoshop /figma
-コーディングに必要な素材の切り出し・画像編集が可能です。
-illustratorの使用経験もあります。
-
-Git / Git Hub
-Gitを用いたバージョン管理システムの業務経験に対応可能です。
-
-
-勉強中
-React / GSAP
-
-
-製作者紹介
-Kakiikada
-
-2018年2月～
-広島から上京し、未経験で現在の企業に入社。現在東京在住。
-車内でWebコーディング・フロントエンドを学び、現在はSESとして現場で活動しています。
-
-これまでに現場や独学で学んできたこと
-・静的なWebサイトのコーディングにhtml/cssで細かいアニメーションを実装
-・レスポンシブやリキッドデザインの、ブラウザサイズに依存しない滑らかなコーディング
-・ｊQueryでのjava script実装や、Type Scriptを使用した動的な要素の実装
-・ワードプレスでのテーマ・ウィジェットの作成
-・Photoshopを用いた画像加工（切り出しや修正作業）
-・チーム開発の経験があります(Git / React / Eclipse Mars / figma / Teams / sauce tree など使用経験あり)
-
-現在はReact・GSAP・ウェブデザイン等を勉強中です。
-
-リモート・出社ハイブリット可能。条件によりフル出社も可能
-稼働開始時期は営業にお問い合わせください。
-
-連絡先
-本ポートフォリオに関するお問い合わせ、および案件のご提案や面談のご調整につきましては、弊社の営業担当まで直接ご連絡いただけますようお願い申し上げます。
-
-会社名あんまり表示したくないので営業の連絡先だけ載せていいか確認する
-
-
-
-
-
-
+</section>
+<section class="l-section u-bgAccent" id="content-3">
+    <div class="l-section_inner">
+        <h2 class="index-title">Skills <small>技術</small></h2>
+        <div class="index-skills">
+            <ul class="index-skills_iconList">
+                <li><i class="devicon-html5-plain colored"></i><p>HTML5</p></li>
+                <li><i class="devicon-css3-plain colored"></i><p>CSS3</p></li>
+                <li><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></li>
+                <li><i class="devicon-jquery-plain colored"></i><p>jQuery</p></li>
+                <li><i class="devicon-typescript-plain colored"></i><p>TypeScript</p></li>
+                <li><i class="devicon-wordpress-plain colored"></i><p>WordPress</p></li>
+                <li><i class="devicon-git-plain colored"></i><p>Git</p></li>
+                <li><i class="devicon-github-original colored"></i><p>GitHub</p></li>
+                <li><i class="devicon-photoshop-plain colored"></i></i><p>Photoshop</p></li>
+                <li><i class="devicon-figma-plain colored"></i><p>Figma</p></li>
+            </ul>
+            <ul class="index-skills_cardList">
+                <li>
+                    <h3 class="index-skills_cardList_title">HTML / CSS</h3>
+                    <p class="index-skills_cardList_text">Figmaなどのデザインを忠実に再現し、画面幅にお応じて滑らかに伸縮するリキッドデザイン・レスポンシブ化を構築できます。また、CSSにjava Scriptを組み合わせたアニメーションを実装できます。</p>
+                </li>
+                <li>
+                    <h3 class="index-skills_cardList_title">JavaScript / jQuery / TypeScript</h3>
+                    <p class="index-skills_cardList_text">実務で求められる主要なUI（ハンバーガーメニュー、スライダー、モーダル、スクロールアニメーション等）の実装とカスタマイズが可能です。</p>
+                </li>
+                <li>
+                    <h3 class="index-skills_cardList_title">WordPress</h3>
+                    <p class="index-skills_cardList_text">ワードプレスでのテーマ作成やウィジェットの追加作業の実務経験があります。テーマを1から構築した経験があります。<br>※セキュリティ対応につきましては、一般的な対策プラグインの導入や基本設定などの一般的な対策の範囲で対応できます。高度なセキュリティ構築などは専門外となっています</p>
+                </li>
+                <li>
+                    <h3 class="index-skills_cardList_title">Photoshop / Figma</h3>
+                    <p class="index-skills_cardList_text">コーディングに必要な素材の切り出し・画像編集が可能です。illustratorの使用経験もあります。</p>
+                </li>
+                <li>
+                    <h3 class="index-skills_cardList_title">Git / GitHub</h3>
+                    <p class="index-skills_cardList_text">Gitを用いたバージョン管理システムの業務経験に対応可能です。<br>コマンドによる基本操作を理解した上で、実務ではSourcetree等のGUIツールを使用しています。<br>※当サイトは勉強のため、Git管理はGUIツールを使用せず、コマンドを用いて作業しています。</p>
+                </li>
+                <li>
+                    <h3 class="index-skills_cardList_title">勉強中</h3>
+                    <p class="index-skills_cardList_text">React / GSAP / ウェブデザイン</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="l-section" id="content-4">
+    <div class="l-section_inner">
+        <h2 class="index-title" >About Me<small>私について</small></h2>
+        <div class="index-about">
+            <!-- <div><img src="" alt=""></div> -->
+            <div>
+                <div class="index-about_name">
+                    <span>Artist Name : </span><p>Kakiikada</p>
+                </div>
+                <div class="index-about_name">
+                    <span>Background : </span><p>2018年2月、広島から上京し、未経験で現在の企業に入社。現在東京在住。社内でWebコーディング・フロントエンドを学び、現在はSESとして現場で活動しています。</p>
+                </div>
+                <div class="index-about_name">
+                    <span>Work Style : </span><p>リモート・出社ハイブリット可能。条件によりフル出社も可能。<br>稼働開始時期は<a href="">営業</a>にお問い合わせください。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="l-section u-bgAccent" id="content-5">
+    <div class="l-section_inner">
+        <h2 class="index-title">Infomation<small>ご案内</small></h2>
+        <div class="index-info">
+            <p>本ポートフォリオに関するお問い合わせ、および案件のご提案や面談のご調整につきましては、弊社の営業担当まで直接ご連絡いただけますようお願い申し上げます。</p>
+        </div>
+    </div>
+</section>
 </main>
-<footer>
-<div class="footer_content">
+<footer class="l-footer">
+    <div class="l-footer_pageTop"><a href="#content-top">PAGE TOP</a></div>
+<div class="l-footer_content">
     <a href="#content-top" class="footer_pageTop"></a>
-    <p class="footer_copy">© 2026 kakiikada. All rights reserved.</p>
+    <p class="l-footer_copy">© 2026 kakiikada. All rights reserved.</p>
 </div>
 </footer>
 </body>
@@ -170,5 +228,5 @@ color-mix()
 FLOCSS
 
 TSのコンパイルコード：npx tsc
-
+FLOCSS
 -->
