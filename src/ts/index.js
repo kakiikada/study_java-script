@@ -188,5 +188,17 @@ if (modal) {
         });
     }
 }
+// index
+// 背景スクロールの動き
+const scrollBg = document.querySelector(".l-fv_bg");
+window.addEventListener("scroll", () => {
+    const scrollBg_scroll = window.scrollY;
+    if (scrollBg) {
+        scrollBg.style.transform = `
+        translateX(${scrollBg_scroll * -0.1}px)
+        translateY(${scrollBg_scroll * -0.4}px)
+        `;
+    }
+});
 export {};
 //# sourceMappingURL=index.js.map

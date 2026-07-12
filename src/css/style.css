@@ -10,9 +10,9 @@
     --content-inner-W: clamp(8px, 0.3rem + 4vw, 80px);
     --content-inner-H: clamp(8px, -0.4rem + 4.5vw, 48px);
 
+    /* --contents-space-S: clamp(16px, -0.4rem + 4.5vw, 48px); */
     --contents-space-M: clamp(16px, 0.45rem + 2.75vw, 60px);
 
-    /* --contents-space-S: clamp(16px, 4vw, 48px); */
     /* --box-inner: clamp(8px, 1.5vw, 32px); */
 }
 html {
@@ -213,6 +213,7 @@ body {
     .l-footer_copy {
         text-align: center;
         color: var(--color-accent);
+        background-color: var(--color-bg);
     }
 }
 .l-footer_pageTop {
@@ -223,6 +224,7 @@ body {
     display: none;
     font-size: 18px;
     position: fixed;
+    font-weight: 300;
     text-align: right;
     transform: rotate(90deg);
     @media screen and (min-width:960px) {
@@ -242,7 +244,7 @@ body {
         display: block;
         position: absolute;
         pointer-events: none;
-        background-color: #ccc;
+        background-color: #555;
         animation: pageTopLine 2s ease-in infinite;
     }
     &::after {
@@ -255,7 +257,7 @@ body {
         display: block;
         position: absolute;
         pointer-events: none;
-        background-color: #555;
+        background-color: rgba(0,0,0,0.3);
     }
 }
 @keyframes pageTopLine {
@@ -275,6 +277,24 @@ body {
         left: 0px;
     }
 }
+.l-fv {
+    inset: 0;
+    /* opacity: 0; */
+    z-index: -50;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    .l-fv_bg {
+        inset: -200vh;
+
+        position: absolute;
+background-image: radial-gradient(circle at center, #f0f7ff 5px, transparent 5px);
+background-size: 60px 60px;
+    }
+}
+
+
+
 /*Component c- 使いまわしできる素材*/
 
 /* Utility u- 装飾*/
@@ -283,6 +303,9 @@ body {
 }
 .uspace-M {
     /* margin-top: var(--contents-space-M); */
+}
+.u-bgBasic {
+    background-color: var(--color-bg);
 }
 .u-bgAccent {
     background-color: var(--color-main);
@@ -293,11 +316,12 @@ body {
 
 .index-catch {
     position: relative;
-    padding-top: clamp(160px, 7.9rem + 10.5vw, 320px);
     text-shadow: 0 0 10px #fff;
+    background-color: var(--color-bg);
+    padding-top: clamp(160px, 7.9rem + 10.5vw, 320px);
     &::before {
         inset: 0;
-        z-index: -1;
+        z-index: 2;
         content: '';
         display: block;
         position: absolute;
@@ -306,7 +330,7 @@ body {
     }
     &::after {
         inset: 0;
-        z-index: -2;
+        z-index: 1;
         content: '';
         opacity: 0.2;
         display: block;
@@ -317,13 +341,18 @@ body {
     }
     .index-catch_title {
         line-height: 1.4;
+        font-family: var(--font-title);
         font-size: clamp(32px, 1.65rem + 1.75vw, 64px);
+        .index-catch_title_color {
+            color: var(--color-accent);
+        }
     }
     .index-catch_text {
         margin-top: var(--contents-space-M);
     }
     .index-catch_scroll {
         width: 48px;
+        z-index: 5;
         height: 110px;
         display: block;
         margin: clamp(48px, 2.4rem + 3vw, 96px) auto 0;
@@ -442,6 +471,7 @@ body {
 .index-works_list {
     .index-works_card {
         display: block;
+        background-color: #fff;
         box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
         & + & {
             margin-top: 16px;
@@ -591,6 +621,8 @@ body {
     }
 }
 .index-info{
+    text-align: center;
+    padding-bottom: 100px;
     @media screen and (min-width:960px) {
         text-align: center;
     }
