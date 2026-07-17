@@ -98,7 +98,7 @@ const changelogData: Changelog[] = [
         time1: "2026",
         time2: "06",
         time3: "21",
-        text: "ポートフォリオサイト作成開始"
+        text: "ギャラリーサイト作成開始"
     },
     {
         time1: "2026",
@@ -117,6 +117,18 @@ const changelogData: Changelog[] = [
         time2: "07",
         time3: "10",
         text: "スクロールアニメーション追加<br>スライダー追加"
+    },
+    {
+        time1: "2026",
+        time2: "07",
+        time3: "11",
+        text: "新トップページ作成・静的コーディング・js"
+    },
+    {
+        time1: "2026",
+        time2: "07",
+        time3: "12",
+        text: "ポートフォリオサイト公開"
     }
 ];
 
@@ -224,4 +236,14 @@ window.addEventListener("scroll" , () => {
     }
 })
 
+//カードのページ遷移
+const cardUrl = document.querySelectorAll<HTMLElement>(".js-cardClick");
+cardUrl.forEach((cardFlame) => {
+    cardFlame.addEventListener("click" , () => {
+        const url = cardFlame.dataset.url;
+        if(url) {
+            window.open(url, "_blank" , "noopener,noreferrer");
+        }
+    });
+});
 
