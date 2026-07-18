@@ -213,13 +213,20 @@ window.addEventListener("scroll", () => {
     }
 });
 //カードのページ遷移
-const cardUrl = document.querySelectorAll(".js-cardClick");
-cardUrl.forEach((cardFlame) => {
-    cardFlame.addEventListener("click", () => {
-        const url = cardFlame.dataset.url;
+const cardFlame = document.querySelectorAll(".js-cardClick");
+cardFlame.forEach((cardFlameItem) => {
+    cardFlameItem.addEventListener("click", () => {
+        const url = cardFlameItem.dataset.url;
         if (url) {
             window.open(url, "_blank", "noopener,noreferrer");
         }
+    });
+});
+// カード内ボタンのページ遷移
+const cardBtn = document.querySelectorAll(".js-cardBtn");
+cardBtn.forEach((cardBtnItem) => {
+    cardBtnItem.addEventListener("click", (e) => {
+        e.stopPropagation();
     });
 });
 export {};
